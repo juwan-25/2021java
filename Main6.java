@@ -7,8 +7,7 @@ public class Main6 {
 		int cnt=0;
 		int a=N;
 		for(int i=1; i>=1; i++){
-			if (N<10) N=((N%10)*10) + ((N/10)+(N%10));
-			else N=((N%10)*10)+(((N/10)+(N%10))%10);
+			N=((N%10)*10) + (((N/10)+(N%10))%10);
 			cnt++;
 			if(a==N) break;
 		}
