@@ -1,4 +1,3 @@
-//1109 юлаж©о
 import java.util.Scanner;
 public class weight_1109{
 	public static void main(String args[]){
