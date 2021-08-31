@@ -2,21 +2,7 @@ import java.util.Scanner;
 public class Bmi{
 	public static void main (String args[]){
 		Scanner sc = new Scanner(System.in);
-/*
-		정적인 프로그램
-		String name = "NCT";	//변수를 선언과 동시에 초기화
-		System.out.println("지금"+name+"V앱 한다");
 
-		동적인 프로그램 - Scanner
-		Scanner sc = new Scanner(System.in);
-		String name = sc.next();
-		System.out.println("지금 "+name+" V앱 한다");
-
-		float height = 1.65f;
-		float weight = 41.0f;
-		float result = weight / (height * height);
-		System.out.println("당신의 BMI 지수는 "+result+" 입니다.");
-*/
 		String name, bmi;
 		float height, weight, result;
 
@@ -29,9 +15,36 @@ public class Bmi{
 		System.out.print("몸무게 : ");
 		weight = sc.nextFloat();
 
-		//System.out.println("당신의 이름은 "+name+" 키는 "+height+" 몸무게는 "+weight+" 입니다.");
-
 		result = weight / (height * height);
-		System.out.println(name+"님의 BMI 지수는 "+result+" 입니다.");
+/*
+		if(result>30.0)
+			bmi="비만";
+		else if(result>25.0)
+			bmi="과체중";
+		else if(result>18.5)
+			bmi="정상";
+		else
+			bmi="저체중";
+
+
+		System.out.println(name+"님의 BMI 수치는 "+result+"이고, "+bmi+"입니다.);
+*/
+
+		int su=(int)result;
+		switch(su) {
+			case 18: case 17: case 16: case 15: 
+				bmi="저체중";
+				break;
+			case 19: case 20: case 21: case 22: case 23: case 24: case 25:
+				bmi="정상";
+				break; 
+			case 26: case 27: case 28: case 29: case 30:
+				bmi="과체중";
+				break;
+			default:
+				bmi="비만";
+				break;
+		}		
+		System.out.println(name+"님의 BMI 수치는 "+result+"이고, "+bmi+"입니다.");
 	}
 }
