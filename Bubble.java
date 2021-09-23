@@ -1,11 +1,21 @@
 package Array;
 
+import java.util.Scanner;
+
 public class Bubble {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		
-		int[] bub= new int[] {3,2,7,1,5,4,6,1,2,3};
+		System.out.print("데이터 갯수 입력 >> ");
+		int index=sc.nextInt();
 		int temp;
+		int[] bub= new int[index];
+		
+		System.out.print("데이터 입력 >> ");
+		for(int i=0; i<bub.length; i++) 
+			bub[i]=sc.nextInt();
+		System.out.println();
 		
 		for(int i=0; i<bub.length; i++)
 			System.out.print(bub[i]+" ");
