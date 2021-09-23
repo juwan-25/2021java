@@ -8,10 +8,9 @@ public class Quiz_01 {
 		// for문을 이용해서 작성하시오.
 		
 		for(int i=10; i<96; i+=2) {
-			if((i*(i+2)*(i+4))/100000==4) {
-					if((i*(i+2)*(i+4))%10==2)
+			int num=i*(i+2)*(i+4);
+			if((num/100000)==4 && (num%10)==2)
 						System.out.println(i+" "+(i+2)+" "+(i+4));
-			}
 		}
 	}
 
