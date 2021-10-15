@@ -16,9 +16,9 @@ public class Array2_score {
 		for(int i=0; i<a.length; i++) {
 			System.out.println(i+1+"조 점수 입력");
 			for(int j=0; j<a[i].length; j++) {
-				if(a[i][j]<0 || a[i][j]>100) j--;
 				System.out.print(sub_t[j]+">> ");
 				a[i][j]=sc.nextInt();
+				if(a[i][j]<0 || a[i][j]>100) j--;
 /*
  				while(true) {
 					System.out.print(sub_t[j]+">> ");
@@ -43,12 +43,20 @@ public class Array2_score {
 		}
 		
 		//각 조 점수 출력
+		System.out.println("=======================================");
+		for(int i=0; i<sub_t.length; i++)
+			System.out.print("\t"+sub_t[i]);
+		System.out.print("\t합계");
+		System.out.println();
+		System.out.println("=======================================");
 		for(int i=0; i<a.length; i++) {
 			System.out.print((i+1)+"조 : ");
 			for(int j=0; j<a[i].length; j++) 
-				System.out.print(a[i][j]+" ");
+				System.out.print("\t"+a[i][j]);
+			System.out.print("\t"+sum[i]);
 			System.out.println();
 		}
+		System.out.println("=======================================");
 		System.out.println();
 		
 		//최종 출력
