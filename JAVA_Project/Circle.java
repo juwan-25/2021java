@@ -1,21 +1,23 @@
-package prog2;
+package prog3;
 
 public class Circle {
-	
 	private int r;
 	private double circum, area;
-	
-	public int getR() {
-		return r;
-	}
-	public void setR(int r) {
-		this.r = r;
-	}
+		
 	public double getCircum() {
 		return circum;
 	}
+
 	public double getArea() {
 		return area;
+	}
+
+	public int getR() {
+		return r;
+	}
+
+	public Circle(int r) {
+		this.r = r;
 	}
 	
 	public void calcCircum() {
@@ -23,6 +25,12 @@ public class Circle {
 	}
 	
 	public void calcArea() {
-		area = Math.pow(r, 2) * Math.PI;
+		area = Math.PI * Math.pow(r, 2);
+	}
+	
+	public void showInfo() {
+		calcCircum();
+		calcArea();
+		RunCircle.showPrint(this);
 	}
 }
